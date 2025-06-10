@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f8f9fa;
+  --foreground: #212529;
+  --accent: #0d6efd;
+  --accent-foreground: #f8f9fa;
+  --accent-hover: #0d6dfdc5;
+
+  --chart: #0d6efd;
+  --chart-legend: #212529;
+  --chart-line: #0d6efd;
+  --chart-square: #0d6dfdc5;
+
+  --border: #000000;
+
+  --destructive: #dc3545;
+  --destructive-foreground: #f8f9fa;
+  --destructive-hover: #c82333;
+
+  --muted: #6c757d;
+  --muted-foreground: #212529;
+  --popover: #f8f9fa;
+  --popover-foreground: #212529;
+}
+
+.dark {
+  --background: #212529;
+  --foreground: #f8f9fa;
+  --accent: #0d6efd;
+  --accent-foreground: #f8f9fa;
+  --accent-hover: #0d6dfdc5;
+
+  --chart: #0d6efd;
+  --chart-legend: #212529;
+  --chart-line: #0d6efd;
+  --chart-square: #0d6dfdc5;
+
+  --border: #ffffff;
+
+  --destructive: #dc3545;
+  --destructive-foreground: #f8f9fa;
+  --destructive-hover: #c82333;
+
+  --muted: #6c757d;
+  --muted-foreground: #212529;
+  --popover: #f8f9fa;
+  --popover-foreground: #212529;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-hover: var(--accent-hover);
+  --color-chart: var(--chart);
+  --color-chart-legend: var(--chart-legend);
+  --color-chart-line: var(--chart-line);
+  --color-chart-square: var(--chart-square);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive-hover: var(--destructive-hover);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --animate-fade-in: fade-in 0.3s ease-in-out forwards;
+  --animate-fade-out: fade-out 0.3s ease-in-out forwards;
+
+  @keyframes fade-in {
+    from {
+      opacity: "0";
+    }
+    to {
+      opacity: "1";
+    }
+  }
+  @keyframes fade-out {
+    from {
+      opacity: "1";
+    }
+    to {
+      opacity: "0";
+    }
+  }
+}
+
+html {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  color-scheme: light dark;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  border-color: var(--color-border);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
